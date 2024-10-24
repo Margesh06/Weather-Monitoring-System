@@ -1,50 +1,38 @@
-/* src/components/Weather.css */
+/* src/styles/weather.css */
 
 .weather-container {
-    max-width: 800px;
-    margin: 0 auto;
+    text-align: center;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to bottom right, #f0f8ff, #e0f7fa);
-    transition: transform 0.3s;
+    background-color: transparent; /* Ensure the container has no background color */
 }
 
-.weather-container:hover {
-    transform: translateY(-5px);
+.weather-circles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line if there's not enough space */
+    background-color: transparent; /* Ensure this wrapper has no background color */
 }
 
-.weather-item {
-    background: white;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
-}
-
-.weather-item:hover {
-    transform: scale(1.02);
+.weather-circle {
+    background-color: transparent; /* Set background to transparent */
+    border: 2px solid rgba(0, 0, 0, 0.2); /* Add a border to define the circle */
+    border-radius: 50%; /* Make the div circular */
+    width: 200px; /* Increased width of the circle */
+    height: 200px; /* Increased height of the circle */
+    margin: 10px; /* Space between circles */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
 }
 
 .weather-title {
-    margin: 0;
-    font-size: 1.5em;
-    color: #00796b;
+    font-size: 1.5em; /* Increased font size */
+    margin: 5px 0;
 }
 
 .weather-detail {
-    margin: 5px 0;
-    font-size: 1.1em;
-}
-
-.loading {
-    font-size: 1.5em;
-    color: #ff9800;
-}
-
-.error {
-    color: #e53935;
-    font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em; /* Increased font size for better visibility */
+    margin: 2px 0;
 }
