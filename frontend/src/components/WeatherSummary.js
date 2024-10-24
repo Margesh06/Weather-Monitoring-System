@@ -36,13 +36,13 @@ const Weather = () => {
     return (
         <div className="weather-container">
             <div className="weather-circles">
-                {weatherData.slice(0, 5).map((data) => ( // Display only the first 5 entries
+                {weatherData.slice(0, 6).map((data) => ( // Display only the first 5 entries
                     <div key={data._id} className="weather-circle">
                         <h2 className="weather-title">{data.city}</h2>
                         <p className="weather-detail">Temperature: {data.temp.toFixed(2)} °C</p>
                         <p className="weather-detail">Feels Like: {data.feels_like.toFixed(2)} °C</p>
                         <p className="weather-detail">Condition: {data.main}</p>
-                        <p className="weather-detail">Timestamp: {new Date(data.timestamp).toLocaleString()}</p>
+                        <p className="weather-detail">Timestamp: <br/> {new Date(data.timestamp).toLocaleString()}</p>
                     </div>
                 ))}
             </div>

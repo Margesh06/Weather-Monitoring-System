@@ -7,32 +7,96 @@
 }
 
 .weather-circles {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows items to wrap onto the next line if there's not enough space */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three circles per row */
+    grid-gap: 90px; /* Space between circles */
     background-color: transparent; /* Ensure this wrapper has no background color */
+    justify-items: start; /* Align all grid items to the left */
+    margin-left: -160px; /* Optional: Add some margin on the left for spacing */
 }
 
 .weather-circle {
     background-color: transparent; /* Set background to transparent */
     border: 2px solid rgba(0, 0, 0, 0.2); /* Add a border to define the circle */
     border-radius: 50%; /* Make the div circular */
-    width: 200px; /* Increased width of the circle */
-    height: 200px; /* Increased height of the circle */
-    margin: 10px; /* Space between circles */
+    width: 250px; /* Increased width for larger circles */
+    height: 250px; /* Increased height for larger circles */
     display: flex;
     flex-direction: column; /* Stack children vertically */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+    transition: transform 0.3s; /* Smooth transform on hover */
+    overflow: hidden; /* Prevent content from overflowing */
+    padding: 10px; /* Optional: Add some padding to give space inside */
+}
+
+.weather-circle:hover {
+    transform: scale(1.05); /* Slightly scale up on hover */
 }
 
 .weather-title {
     font-size: 1.5em; /* Increased font size */
     margin: 5px 0;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    overflow: hidden; /* Ensure no overflow */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .weather-detail {
     font-size: 1em; /* Increased font size for better visibility */
     margin: 2px 0;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+    overflow: hidden; /* Ensure no overflow */
+    white-space: nowrap; /* Prevent text wrapping */
+    text-align: center; /* Center the text within the circle */
+}
+
+
+/* Zigzag effect */
+.weather-circle:nth-child(odd) {
+    transform: translateY(20px); /* Move odd circles down */
+}
+
+.weather-circle:nth-child(even) {
+    transform: translateY(-20px); /* Move even circles up */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .weather-circle {
+        height: 200px; /* Adjust height for smaller screens */
+        width: 200px; /* Adjust width for smaller screens */
+    }
+
+    .weather-title {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .weather-circle:nth-child(odd) {
+        transform: translateY(10px); /* Adjust for smaller screens */
+    }
+
+    .weather-circle:nth-child(even) {
+        transform: translateY(-10px); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .weather-circle {
+        height: 160px; /* Adjust height for very small screens */
+        width: 160px; /* Adjust width for very small screens */
+    }
+
+    .weather-title {
+        font-size: 1em; /* Further adjust font size for very small screens */
+    }
+
+    .weather-circle:nth-child(odd) {
+        transform: translateY(5px); /* Adjust for very small screens */
+    }
+
+    .weather-circle:nth-child(even) {
+        transform: translateY(-5px); /* Adjust for very small screens */
+    }
 }
