@@ -1,0 +1,50 @@
+/* src/components/Weather.css */
+
+.weather-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #f0f8ff, #e0f7fa);
+    transition: transform 0.3s;
+}
+
+.weather-container:hover {
+    transform: translateY(-5px);
+}
+
+.weather-item {
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.weather-item:hover {
+    transform: scale(1.02);
+}
+
+.weather-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: #00796b;
+}
+
+.weather-detail {
+    margin: 5px 0;
+    font-size: 1.1em;
+}
+
+.loading {
+    font-size: 1.5em;
+    color: #ff9800;
+}
+
+.error {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 1.2em;
+}

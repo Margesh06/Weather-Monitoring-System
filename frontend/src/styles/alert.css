@@ -1,0 +1,70 @@
+/* Alerts.css */
+
+.alerts-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.alerts-title {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.alert-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #ff4d4d; /* Red border for alert emphasis */
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.alert-type {
+    font-size: 18px;
+    color: #ff4d4d;
+}
+
+.alert-timestamp {
+    font-size: 12px;
+    color: #666;
+}
+
+.alert-body {
+    font-size: 14px;
+    color: #333;
+}
+
+.alert-message {
+    margin: 0 0 5px;
+    line-height: 1.4;
+}
+
+.alert-city {
+    font-size: 13px;
+    color: #666;
+}
+
+.no-alerts {
+    text-align: center;
+    font-size: 16px;
+    color: #888;
+}

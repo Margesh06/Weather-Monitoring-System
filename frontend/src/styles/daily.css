@@ -1,0 +1,77 @@
+/* DailySummaryForm.css */
+
+.daily-summary-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.summary-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+    font-size: 16px;
+}
+
+.calculate-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calculate-button:hover {
+    background-color: #45a049;
+}
+
+.summary-results {
+    margin-top: 20px;
+}
+
+.summary-result {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.city-summary-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.no-data-message {
+    color: #d9534f;
+}
+
+.error {
+    color: #d9534f;
+    margin-top: 15px;
+    text-align: center;
+}
