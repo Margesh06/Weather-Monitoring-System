@@ -12,7 +12,7 @@
     grid-gap: 90px; /* Space between circles */
     background-color: transparent; /* Ensure this wrapper has no background color */
     justify-items: start; /* Align all grid items to the left */
-    margin-left: -160px; /* Optional: Add some margin on the left for spacing */
+    margin-left: -210px; /* Optional: Add some margin on the left for spacing */
 }
 
 .weather-circle {

@@ -27,7 +27,7 @@ const DailySummaryForm = () => {
 
     return (
         <div className="daily-summary-form">
-            <h2 className="form-title">Calculate Daily Weather Summary</h2>
+            <h2 className="form-title">Daily Weather Summary</h2>
             <form onSubmit={handleSubmit} className="summary-form">
                 <input
                     type="date"
