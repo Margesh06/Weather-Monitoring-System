@@ -38,13 +38,13 @@ This project is a real-time weather monitoring system that retrieves weather dat
 
 2. **Install Backend Dependencies**
    ```bash
-   cd server
+   cd backend
    npm install
    ```
 
 3. **Install Frontend Dependencies**
    ```bash
-   cd ../client
+   cd frontend
    npm install
    ```
 
@@ -56,13 +56,13 @@ This project is a real-time weather monitoring system that retrieves weather dat
 
 5. **Start the Backend Server**
    ```bash
-   cd ../server
+   cd backend
    node app.js
    ```
 
 6. **Start the Frontend Development Server**
    ```bash
-   cd ../client
+   cd frontend
    npm start
    ```
 
