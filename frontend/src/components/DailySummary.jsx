@@ -51,9 +51,9 @@ const DailySummaryForm = () => {
                         ) : (
                             <>
                                 <h3 className="city-summary-title">Summary for {summary.city} on {new Date(summary.date).toLocaleDateString()}</h3>
-                                <p><strong>Average Temperature:</strong> {summary.avg_temp.toFixed(2)}°C</p>
-                                <p><strong>Maximum Temperature:</strong> {summary.max_temp}°C</p>
-                                <p><strong>Minimum Temperature:</strong> {summary.min_temp}°C</p>
+                                <p><strong>Average Temperature:</strong> {parseFloat(summary.avg_temp).toFixed(2)}°C</p>
+                                <p><strong>Maximum Temperature:</strong> {parseFloat(summary.max_temp).toFixed(2)}°C</p>
+                                <p><strong>Minimum Temperature:</strong> {parseFloat(summary.min_temp).toFixed(2)}°C</p>
                                 <p><strong>Dominant Condition:</strong> {summary.dominant_condition}</p>
                             </>
                         )}
